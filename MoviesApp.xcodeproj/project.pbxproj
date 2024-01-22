@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		090218042B5EAB5C00CF4F65 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090218032B5EAB5C00CF4F65 /* Constants.swift */; };
+		090218072B5EABF100CF4F65 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090218062B5EABF100CF4F65 /* ImageLoader.swift */; };
+		0902180A2B5EAD9800CF4F65 /* Rating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090218092B5EAD9800CF4F65 /* Rating.swift */; };
+		0902180C2B5EAF8400CF4F65 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0902180B2B5EAF8400CF4F65 /* URLImage.swift */; };
 		09ABE7782B5EA6FF0091DCCD /* MoviesAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ABE7772B5EA6FF0091DCCD /* MoviesAppApp.swift */; };
 		09ABE77A2B5EA6FF0091DCCD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09ABE7792B5EA6FF0091DCCD /* ContentView.swift */; };
 		09ABE77C2B5EA7000091DCCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09ABE77B2B5EA7000091DCCD /* Assets.xcassets */; };
@@ -34,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		090218032B5EAB5C00CF4F65 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		090218062B5EABF100CF4F65 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		090218092B5EAD9800CF4F65 /* Rating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating.swift; sourceTree = "<group>"; };
+		0902180B2B5EAF8400CF4F65 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		09ABE7742B5EA6FF0091DCCD /* MoviesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		09ABE7772B5EA6FF0091DCCD /* MoviesAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAppApp.swift; sourceTree = "<group>"; };
 		09ABE7792B5EA6FF0091DCCD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +80,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		090218022B5EAB3200CF4F65 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				090218032B5EAB5C00CF4F65 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		090218052B5EABD100CF4F65 /* Loaders */ = {
+			isa = PBXGroup;
+			children = (
+				090218062B5EABF100CF4F65 /* ImageLoader.swift */,
+			);
+			path = Loaders;
+			sourceTree = "<group>";
+		};
+		090218082B5EAD5400CF4F65 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				090218092B5EAD9800CF4F65 /* Rating.swift */,
+				0902180B2B5EAF8400CF4F65 /* URLImage.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
 		09ABE76B2B5EA6FF0091DCCD = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +128,9 @@
 		09ABE7762B5EA6FF0091DCCD /* MoviesApp */ = {
 			isa = PBXGroup;
 			children = (
+				090218022B5EAB3200CF4F65 /* Utils */,
+				090218052B5EABD100CF4F65 /* Loaders */,
+				090218082B5EAD5400CF4F65 /* Controls */,
 				09ABE7772B5EA6FF0091DCCD /* MoviesAppApp.swift */,
 				09ABE7792B5EA6FF0091DCCD /* ContentView.swift */,
 				09ABE77B2B5EA7000091DCCD /* Assets.xcassets */,
@@ -194,6 +230,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1510;
+				ORGANIZATIONNAME = "Jonattan Sousa";
 				TargetAttributes = {
 					09ABE7732B5EA6FF0091DCCD = {
 						CreatedOnToolsVersion = 15.1;
@@ -260,7 +297,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				09ABE77A2B5EA6FF0091DCCD /* ContentView.swift in Sources */,
+				0902180C2B5EAF8400CF4F65 /* URLImage.swift in Sources */,
 				09ABE7782B5EA6FF0091DCCD /* MoviesAppApp.swift in Sources */,
+				0902180A2B5EAD9800CF4F65 /* Rating.swift in Sources */,
+				090218072B5EABF100CF4F65 /* ImageLoader.swift in Sources */,
+				090218042B5EAB5C00CF4F65 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
