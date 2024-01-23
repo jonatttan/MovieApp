@@ -25,8 +25,13 @@ struct MovieListScreen: View {
             Spacer()
                 .navigationBarTitle("Movies")
             
-            MovieListView(movies: self.movieListVM.movies)
-            
+            if self.movieListVM.loadingState == .success {
+                MovieListView(movies: self.movieListVM.movies)
+            } else if self.movieListVM.loadingState == .failed {
+                FailedView()
+            } else if self.movieListVM.loadingState == .loading {
+                LoadingView()
+            }
         }.padding().embedNavigationView().animation(.default)
     }
     

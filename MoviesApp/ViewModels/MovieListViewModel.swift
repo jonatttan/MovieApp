@@ -8,12 +8,18 @@
 
 import Foundation
 
-class MovieListViewModel: ObservableObject {
+class MovieListViewModel: ViewModelBase {
     
     @Published var movies = [MovieViewModel]()
     let httpClient = HTTPClient()
     
     func searchByName(_ name: String) {
+        
+        if name.isEmpty {
+            return
+        }
+        
+        self.loadingState = .loading
         
         httpClient.getMovies(search: name) { result in
             switch result {
@@ -21,10 +27,14 @@ class MovieListViewModel: ObservableObject {
                 if let movies = movies {
                     DispatchQueue.main.async {
                         self.movies = movies.map(MovieViewModel.init)
+                        self.loadingState = .success
                     }
                 }
             case .failure(let error):
                 print(error.localizedDescription)
+                DispatchQueue.main.async {
+                    self.loadingState = .failed
+                }
             }
         }
         
