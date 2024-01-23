@@ -11,7 +11,7 @@ import Foundation
 extension URL {
     
     static func forMovies(_ name: String) -> URL? {
-        URL(string: "http://address.com/movies/\(name)\(Constants.API_KEY)")
+        URL(string: "http://www.omdbapi.com/?t=\(name)\(Constants.API_KEY)")
     }
     
 }
