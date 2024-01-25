@@ -10,8 +10,8 @@ import SwiftUI
 
 struct FailedView: View {
     var body: some View {
-        Text("Oops!")
-            .font(.largeTitle)
+        Image("oops")
+        Spacer()
     }
 }
 
